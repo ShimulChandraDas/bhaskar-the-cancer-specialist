@@ -4,17 +4,21 @@ import { FcGoogle } from 'react-icons/fc';
 import { BsGithub } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../../../firebase.init';
+import Loading from '../../../Shared/Loading/Loading';
 const SocialLogin = () => {
-    const [signInWithGoogle, user, error] = useSignInWithGoogle(auth);
-    const [signInWithGithub, gitUser, gitError] = useSignInWithGithub(auth);
+    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const [signInWithGithub, gitUser, gitLoading, gitError] = useSignInWithGithub(auth);
 
     const navigate = useNavigate();
     let errorElement;
+
+    if (loading || gitLoading) {
+        return <Loading></Loading>
+    }
+
     if (error || gitError) {
 
         errorElement = <p className='text-danger'>Error: {error?.message} {gitError?.message}</p>
-
-
     }
 
     if (user || gitUser) {
