@@ -5,7 +5,7 @@ const About = () => {
     return (
         <div className='container text-center'>
             <h1 className='text-center mt-5 pt-5 pb-5 fw-bold fs-1 text-uppercase text-success'>This is about us</h1>
-            <div className='d-flex justify-content-center'>
+            <div className='d-flex justify-content-center mb-5'>
                 <img className='w-20' src={me} alt="" />
 
             </div>
