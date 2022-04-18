@@ -22,9 +22,7 @@ const Login = () => {
         user, error, loading
     ] = useSignInWithEmailAndPassword(auth);
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
-    if (loading || sending) {
-        return <Loading></Loading>
-    }
+
 
     if (user) {
         navigate(from, { replace: true });

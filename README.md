@@ -12,6 +12,7 @@ This project was bootstrapped with [Github Link](https://github.com/programming-
 * Firebase Authentication
 * Use react Bootstrap
 * Use react icon liabary
+* react-toastif used
 * Use Hooks
 * Use Stats
 * useParams
