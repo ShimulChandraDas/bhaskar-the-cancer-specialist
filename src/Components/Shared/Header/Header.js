@@ -31,21 +31,22 @@ const Header = () => {
                                     className="me-2"
                                     aria-label="Search"
                                 />
-                                <Button variant="outline-dark">Search</Button>
+                                <Button className='fw-bold fs-5 text-white' variant="outline-dark">Search</Button>
                             </Form>
 
                         </Nav>
                         <Nav>
-                            <Nav.Link as={Link} to="/services">Service</Nav.Link>
-                            <Nav.Link as={Link} to="/blog">Blogs</Nav.Link>
-                            <Nav.Link as={Link} to="/about">About</Nav.Link>
-                            <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
+                            <Nav.Link className='fw-bold fs-5' as={Link} to="/services">Service</Nav.Link>
+                            <Nav.Link className='fw-bold fs-5' as={Link} to="/blog">Blogs</Nav.Link>
+
+                            <Nav.Link className='fw-bold fs-5' as={Link} to="/contact">Contact Us</Nav.Link>
+                            <Nav.Link className='fw-bold fs-5' as={Link} to="/about">About</Nav.Link>
 
                             {
                                 user ?
                                     <button className='btn btn-link text-white text-decoration-none' onClick={handleSignOut}>Sign out</button>
                                     :
-                                    <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                                    <Nav.Link className='fw-bold fs-5' as={Link} to="/login">Login</Nav.Link>
                             }
                         </Nav>
                     </Navbar.Collapse>
