@@ -5,14 +5,24 @@ import { getAuth } from 'firebase/auth'
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+// const firebaseConfig = {
+//     apiKey: process.env.REACT_APP_apiKey,
+//     authDomain: process.env.REACT_APP_authDomain,
+//     projectId: process.env.REACT_APP_projectId,
+//     storageBucket: process.env.REACT_APP_storageBucket,
+//     messagingSenderId: process.env.REACT_APP_messagingSenderId,
+//     appId: process.env.REACT_APP_appId
+// };
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_apiKey,
-    authDomain: process.env.REACT_APP_authDomain,
-    projectId: process.env.REACT_APP_projectId,
-    storageBucket: process.env.REACT_APP_storageBucket,
-    messagingSenderId: process.env.REACT_APP_messagingSenderId,
-    appId: process.env.REACT_APP_appId
+    apiKey: "AIzaSyADS-OM3sFmGNDIKRuyM5fK1iY2G0pEP40",
+    authDomain: "bhaskar-the-cancer-specialist.firebaseapp.com",
+    projectId: "bhaskar-the-cancer-specialist",
+    storageBucket: "bhaskar-the-cancer-specialist.appspot.com",
+    messagingSenderId: "128555810068",
+    appId: "1:128555810068:web:a906fe05f527615c8d1601"
 };
+
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

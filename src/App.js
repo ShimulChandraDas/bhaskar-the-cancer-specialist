@@ -1,9 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './Components/Pages/About/About';
+import Checkout from './Components/Pages/Checkout/Checkout/Checkout';
 import Details from './Components/Pages/Details/Details';
 import Home from './Components/Pages/Home/Home';
 import Login from './Components/Pages/Login/Login';
+import RequireAuth from './Components/Pages/Login/RequireAuth/RequireAuth';
 import Register from './Components/Pages/Register/Register';
 import Footer from './Components/Shared/Footer/Footer';
 import Header from './Components/Shared/Header/Header';
@@ -20,6 +22,11 @@ function App() {
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='/checkout' element={
+          <RequireAuth>
+            <Checkout></Checkout>
+          </RequireAuth>
+        }></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
